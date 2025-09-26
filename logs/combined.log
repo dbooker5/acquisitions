@@ -1,2 +1,66 @@
 {"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [25/Sep/2025:12:25:02 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/Sep/2025:19:10:14 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/Sep/2025:19:16:45 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/Sep/2025:19:16:45 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/Sep/2025:19:18:50 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:24:38 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:24:53 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:25:47 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:26:22 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:27:24 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 404 156 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:28:22 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 404 156 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:28:44 +0000] \"POST /api/ HTTP/1.1\" 404 144 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:29:01 +0000] \"GET /api/ HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:16:29:10 +0000] \"POST /api/ HTTP/1.1\" 404 144 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:47:17 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 404 156 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:48:01 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 404 156 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:49:21 +0000] \"POST /api/auth/signup HTTP/1.1\" 404 155 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:49:36 +0000] \"POST /api/sign-up HTTP/1.1\" 404 151 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:49:43 +0000] \"POST /api HTTP/1.1\" 404 143 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:49:48 +0000] \"POST / HTTP/1.1\" 404 140 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:50:02 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:50:13 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:50:27 +0000] \"GET /api/auth HTTP/1.1\" 404 147 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:50:34 +0000] \"GET /api/ HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:51:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 404 156 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:57:20 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 31 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:18:58:47 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:01:36 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:02:50 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:03:33 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: errors.issues.map(...).json is not a function","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:10:58 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 496 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: errors.issues.map(...).json is not a function","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:14:58 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 496 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:24:23 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:25:23 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:28:11 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:30:45 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:31:31 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 144 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:37:09 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 159 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:37:36 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 159 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:38:02 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:38:41 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:39:32 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:40:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:41:30 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: Cannot read properties of undefined (reading 'toString')","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:55:33 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1271 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: contact@jmastery.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:19:59:51 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:20:59:16 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$vgI2NpkXCyHz5jY4xJXOwezzmEjrZznVnLqwK/QrqYI94.e46l5cm,user","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$vgI2NpkXCyHz5jY4xJXOwezzmEjrZznVnLqwK/QrqYI94.e46l5cm,user","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:01:40 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1200 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:16:33 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1200 \"-\" \"HTTPie\"","service":"acquisitions-api"}
