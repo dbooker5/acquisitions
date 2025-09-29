@@ -5,3 +5,9 @@
 {"level":"error","message":"Signup error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$vgI2NpkXCyHz5jY4xJXOwezzmEjrZznVnLqwK/QrqYI94.e46l5cm,user","service":"acquisitions-api"}
 {"level":"error","message":"Error creating the user: Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
 {"level":"error","message":"Signup error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}

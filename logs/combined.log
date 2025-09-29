@@ -64,3 +64,33 @@
 {"level":"error","message":"Error creating the user: Error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
 {"level":"error","message":"Signup error: Failed query: insert into \"users\" (\"id\", \"name\", \"email\", \"password\", \"role\", \"created_at\", \"updated_at\") values (default, $1, $2, $3, $4, default, default) returning \"id\", \"name\", \"email\", \"role\", \"created_at\"\nparams: Adrian,contact@jmastery.com,$2b$10$eEO/l/pEUoFvv2aW7mdye.9bbIyQNNFJPzCZZhT82wXmqoxEPYvWm,user","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [26/Sep/2025:21:16:33 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1200 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User contact@jmastery.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: contact@jmastery.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:22:40 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 106 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:26:49 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 471 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:27:41 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 471 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error: User already exists","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [26/Sep/2025:21:27:44 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 471 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User contact@jmastery.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: contact@jmastery.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:11:48:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User contact@studio5ive.org created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: contact@studio5ive.org","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:11:50:59 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 108 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User contact@studio5ive.org authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: contact@studio5ive.org","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:12:41:28 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:12:44:06 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User contact@studio5ive.org authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: contact@studio5ive.org","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:12:44:26 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 107 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:12:46:28 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [29/Sep/2025:12:46:29 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
