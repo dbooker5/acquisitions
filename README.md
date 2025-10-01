@@ -160,12 +160,14 @@ docker-compose -f docker-compose.prod.yml --profile nginx up -d
 ## Environment Configuration
 
 ### Development (.env.development)
+
 - Uses **Neon Local** proxy for database access
 - Connects to ephemeral database branches
 - Includes debug logging and development-friendly settings
 - Database URL: `postgres://neon:npg@neon-local:5432/acquisitions?sslmode=require`
 
 ### Production (.env.production)
+
 - Uses **Neon Cloud Database** directly
 - Optimized for performance and security
 - Environment variables injected via secrets management
@@ -247,24 +249,27 @@ docker-compose -f docker-compose.dev.yml exec neon-local psql -U neon -d acquisi
 ### Common Issues
 
 1. **Neon Local Connection Failed**
+
    ```bash
    # Check if Neon Local is running
    docker-compose -f docker-compose.dev.yml logs neon-local
-   
+
    # Verify environment variables
    docker-compose -f docker-compose.dev.yml exec app env | grep NEON
    ```
 
 2. **Application Won't Start**
+
    ```bash
    # Check application logs
    docker-compose -f docker-compose.dev.yml logs app
-   
+
    # Verify health check
    curl http://localhost:3000/health
    ```
 
 3. **Database Migration Issues**
+
    ```bash
    # Reset database (development only)
    docker-compose -f docker-compose.dev.yml down -v
@@ -280,6 +285,7 @@ docker-compose -f docker-compose.dev.yml exec neon-local psql -U neon -d acquisi
 ### Logging
 
 Development logs are available at:
+
 - Application logs: `./logs/combined.log`
 - Error logs: `./logs/error.log`
 - Docker logs: `docker-compose logs`
@@ -287,11 +293,13 @@ Development logs are available at:
 ## Security Considerations
 
 ### Development
+
 - Neon Local uses self-signed certificates
 - Debug logging may contain sensitive information
 - Use `.env.development.local` for local overrides (not tracked in git)
 
 ### Production
+
 - Use secrets management systems (Docker Secrets, Kubernetes Secrets, etc.)
 - Enable rate limiting and security headers
 - Regularly update dependencies and base images
@@ -301,12 +309,14 @@ Development logs are available at:
 ### Environment Variables Security
 
 **Never commit these to version control:**
+
 - API keys (`NEON_API_KEY`)
 - Database URLs with credentials
 - JWT secrets
 - Cookie secrets
 
 **Best Practices:**
+
 ```bash
 # Use a secrets management system
 DATABASE_URL=$(vault kv get -field=url secret/database)
@@ -337,6 +347,7 @@ secrets:
 ## Support
 
 For issues related to:
+
 - **Neon Database**: [Neon Documentation](https://neon.com/docs)
 - **Docker**: [Docker Documentation](https://docs.docker.com/)
 - **Application**: Create an issue in this repository
@@ -346,6 +357,7 @@ For issues related to:
 ## Quick Start Commands
 
 ### Development
+
 ```bash
 # One-time setup
 cp .env.development .env.development.local
@@ -358,6 +370,7 @@ docker-compose -f docker-compose.dev.yml up -d
 ```
 
 ### Production
+
 ```bash
 # One-time setup
 cp .env.production .env.production.local

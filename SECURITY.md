@@ -5,6 +5,7 @@ This document outlines security best practices for the Acquisitions API Docker s
 ## Environment Variables Security
 
 ### ❌ Never Commit These to Version Control
+
 - `NEON_API_KEY` - Your Neon API key
 - `DATABASE_URL` - Database connection strings with credentials
 - `JWT_SECRET` - JSON Web Token signing key
@@ -14,6 +15,7 @@ This document outlines security best practices for the Acquisitions API Docker s
 ### ✅ Best Practices
 
 #### 1. Use Local Environment Files
+
 ```bash
 # Development
 cp .env.development .env.development.local
@@ -25,6 +27,7 @@ cp .env.production .env.production.local
 ```
 
 #### 2. Use Docker Secrets (Production)
+
 ```yaml
 # docker-compose.prod.yml
 version: '3.8'
@@ -44,6 +47,7 @@ secrets:
 ```
 
 #### 3. Use External Secret Management
+
 ```bash
 # HashiCorp Vault example
 DATABASE_URL=$(vault kv get -field=url secret/database)
@@ -61,7 +65,9 @@ DATABASE_URL=$(az keyvault secret show --vault-name MyKeyVault --name database-u
 ### Container Security
 
 #### 1. Non-Root User
+
 The Dockerfile already includes:
+
 ```dockerfile
 # Create and use non-root user
 RUN addgroup -g 1001 -S nodejs && \
@@ -70,12 +76,14 @@ USER nextjs
 ```
 
 #### 2. Minimal Base Image
+
 ```dockerfile
 FROM node:20-alpine AS base
 # Alpine is minimal and security-focused
 ```
 
 #### 3. Multi-stage Build
+
 ```dockerfile
 # Separate build stages reduce attack surface
 FROM base AS development
@@ -85,19 +93,21 @@ FROM base AS production
 ### Network Security
 
 #### 1. Internal Networks
+
 ```yaml
 networks:
   acquisitions-network:
     driver: bridge
-    internal: true  # No external access
+    internal: true # No external access
 ```
 
 #### 2. Limit Exposed Ports
+
 ```yaml
 services:
   app:
     ports:
-      - "127.0.0.1:3000:3000"  # Bind to localhost only
+      - '127.0.0.1:3000:3000' # Bind to localhost only
 ```
 
 ## Neon Database Security
@@ -105,6 +115,7 @@ services:
 ### Development (Neon Local)
 
 #### 1. API Key Protection
+
 ```bash
 # Store in secure location, not in shell history
 export NEON_API_KEY="$(cat ~/.neon/api_key)"
@@ -114,15 +125,17 @@ docker-compose --env-file .secrets -f docker-compose.dev.yml up
 ```
 
 #### 2. Ephemeral Branches
+
 ```yaml
 environment:
-  PARENT_BRANCH_ID: ${PARENT_BRANCH_ID}  # Creates ephemeral branches
-  DELETE_BRANCH: true                    # Auto-cleanup
+  PARENT_BRANCH_ID: ${PARENT_BRANCH_ID} # Creates ephemeral branches
+  DELETE_BRANCH: true # Auto-cleanup
 ```
 
 ### Production (Neon Cloud)
 
 #### 1. Connection String Security
+
 ```bash
 # ❌ Bad - credentials in plain text
 DATABASE_URL=postgres://user:password@host.neon.tech/db
@@ -132,6 +145,7 @@ DATABASE_URL=postgres://user:password@host.neon.tech/db?sslmode=require&connect_
 ```
 
 #### 2. Network Access Control
+
 - Configure Neon IP allowlist in production
 - Use VPC peering or private endpoints when available
 - Enable database SSL/TLS enforcement
@@ -139,45 +153,51 @@ DATABASE_URL=postgres://user:password@host.neon.tech/db?sslmode=require&connect_
 ## Application Security
 
 ### 1. Helmet Configuration
+
 ```javascript
 // Already included in app.js
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
-      imgSrc: ["'self'", "data:", "https:"],
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'"],
+        imgSrc: ["'self'", 'data:', 'https:'],
+      },
     },
-  },
-  hsts: {
-    maxAge: 31536000,
-    includeSubDomains: true,
-    preload: true
-  }
-}));
+    hsts: {
+      maxAge: 31536000,
+      includeSubDomains: true,
+      preload: true,
+    },
+  })
+);
 ```
 
 ### 2. CORS Configuration
+
 ```javascript
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? process.env.CORS_ORIGIN?.split(',') 
-    : true,
+  origin:
+    process.env.NODE_ENV === 'production'
+      ? process.env.CORS_ORIGIN?.split(',')
+      : true,
   credentials: true,
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 ```
 
 ### 3. Rate Limiting
+
 ```javascript
 import rateLimit from 'express-rate-limit';
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP'
+  message: 'Too many requests from this IP',
 });
 
 app.use('/api/', limiter);
@@ -186,6 +206,7 @@ app.use('/api/', limiter);
 ## Secrets Generation
 
 ### Generate Secure Secrets
+
 ```bash
 # JWT Secret (64 characters)
 node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
@@ -201,6 +222,7 @@ openssl rand -hex 32  # For cookies
 ## Monitoring and Logging
 
 ### 1. Security Events to Log
+
 - Failed authentication attempts
 - Invalid JWT tokens
 - Rate limit violations
@@ -208,19 +230,21 @@ openssl rand -hex 32  # For cookies
 - Suspicious request patterns
 
 ### 2. Log Security
+
 ```yaml
 services:
   app:
     logging:
-      driver: "json-file"
+      driver: 'json-file'
       options:
-        max-size: "10m"
-        max-file: "3"
+        max-size: '10m'
+        max-file: '3'
     volumes:
-      - ./logs:/app/logs:ro  # Read-only mount
+      - ./logs:/app/logs:ro # Read-only mount
 ```
 
 ### 3. Health Monitoring
+
 ```bash
 # Monitor application health
 curl -f http://localhost:3000/health || alert
@@ -232,6 +256,7 @@ docker-compose exec app npm run db:check || alert
 ## Production Deployment Security
 
 ### 1. CI/CD Pipeline Security
+
 ```yaml
 # GitHub Actions example
 - name: Build and deploy
@@ -243,6 +268,7 @@ docker-compose exec app npm run db:check || alert
 ```
 
 ### 2. Container Registry Security
+
 ```bash
 # Use private registry
 docker tag app:latest registry.company.com/acquisitions:latest
@@ -253,6 +279,7 @@ docker scan app:latest
 ```
 
 ### 3. Runtime Security
+
 ```bash
 # Use read-only root filesystem
 docker run --read-only --tmpfs /tmp app:latest
@@ -264,12 +291,14 @@ docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE app:latest
 ## Incident Response
 
 ### 1. Compromise Detection
+
 - Monitor for unusual database queries
 - Check for unexpected network connections
 - Review authentication logs
 - Monitor resource usage patterns
 
 ### 2. Response Actions
+
 ```bash
 # Immediate actions
 docker-compose down                    # Stop services
@@ -282,6 +311,7 @@ docker exec app netstat -tulpn       # Check connections
 ```
 
 ### 3. Recovery
+
 ```bash
 # Rotate secrets
 kubectl create secret generic new-secrets --from-literal=jwt="new-secret"
@@ -296,11 +326,13 @@ docker-compose -f docker-compose.prod.yml up -d
 ## Security Checklist
 
 ### Before Development
+
 - [ ] Configure `.env.development.local` with real Neon credentials
 - [ ] Verify `.neon_local/` is in `.gitignore`
 - [ ] Generate secure development secrets
 
 ### Before Production
+
 - [ ] Set up secrets management system
 - [ ] Configure production environment variables
 - [ ] Enable SSL/TLS for database connections
@@ -311,6 +343,7 @@ docker-compose -f docker-compose.prod.yml up -d
 - [ ] Document incident response procedures
 
 ### Regular Maintenance
+
 - [ ] Rotate secrets quarterly
 - [ ] Update dependencies monthly
 - [ ] Review access logs weekly

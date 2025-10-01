@@ -33,7 +33,7 @@ export default [
     },
   },
   {
-    files: ['tests/**/*.js'],
+    files: ['{test,tests}/**/*.js'], // ✅ now matches both test/ and tests/
     languageOptions: {
       globals: {
         describe: 'readonly',
