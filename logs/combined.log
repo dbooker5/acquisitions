@@ -105,3 +105,8 @@
 {"level":"info","message":"::1 - - [30/Sep/2025:10:57:09 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [30/Sep/2025:10:57:50 +0000] \"GET / HTTP/1.1\" 200 24 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [30/Sep/2025:14:33:10 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [30/Sep/2025:14:33:11 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [30/Sep/2025:14:34:53 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
